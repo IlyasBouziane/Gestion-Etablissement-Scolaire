@@ -10,3 +10,11 @@ Un projet de système d'information et de base de données.
 ## Espace Administrateur 
 
 Le contenu du projet doit être placé dans le path : C:\Documents and Settings\Administrator\Desktop\FP
+
+## Espace Bibliothèque 
+
+Le contenu du projet doit être placé dans le path : C:\Documents and Settings\Administrator\Desktop\Mon_Projet_SI_xp
+
+## Espace Responsable
+
+Le contenu du projet doit être placé dans le path : C:\Documents and Settings\Administrator\Desktop\salma
