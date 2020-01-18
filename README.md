@@ -2,6 +2,8 @@
 
 Un projet de système d'information et de base de données.
 
+Ce projet est accompagné des fichiers contenant les requêtes nécessaires pour créer toute la base de données
+
 **Outils utilisés pour l'analyse et la conception :** Méthode Merise 
 
 **Outils utilisés pour la réalisation :** Oracle Forms 11g , Oracle Database
