@@ -1,0 +1,47 @@
+
+	
+
+create or replace view dmds as 
+	select d.id_demande,d.id_produit,s.nom_stock,d.date_depos_demande,d.qte_demande from demande d,stock s,occupation o
+	where 	d.type_demande = 'AFFECTATION' and
+		d.id_produit in (
+		select id_produit from materiel where id_produit = 				d.id_produit and  id_stock = 0 and 
+		(select count(reference_materiel) from materiel where 				id_produit = d.id_produit and id_stock = 0) <					d.qte_demande ) and
+		o.id_resp_occupant = d.id_resp and
+		o.date_occupation = ( select max(date_occupation) from occupation where id_resp_occupant = o.id_resp_occupant
+and d.date_depos_demande >= date_occupation ) and 
+		o.id_stock_occupe = s.id_stock;
+
+
+
+
+
+======
+	
+
+
+
+create or replace view affcts as 
+	select d.id_produit,s.nom_stock,d.date_depos_demande,d.qte_demande from demande d,stock s,occupation o
+	where 	d.type_demande = 'AFFECT' and
+		d.id_produit in (
+		select id_produit from materiel where id_produit = 				d.id_produit and  id_stock = 0 and 
+		(select count(reference_materiel) from materiel where 				id_produit = d.id_produit and id_stock = 0) >= 					d.qte_demande ) and
+		o.id_resp_occupant = d.id_resp and
+		o.date_occupation = ( select max(date_occupation) from occupation where id_resp_occupant = o.id_resp_occupant
+and d.date_depos_demande >= date_occupation ) and 
+		o.id_stock_occupe = s.id_stock;
+
+
+
+=====
+
+
+create or replace view histemp as
+	select date_emprunt,ref_materiel_emprunte,s.nom_stock,date_retour from emprunt,stock s where id_stock_emprunteur=id_stock; 
+
+
+
+
+
+
