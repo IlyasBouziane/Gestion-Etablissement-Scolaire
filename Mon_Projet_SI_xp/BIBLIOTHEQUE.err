@@ -1,0 +1,5 @@
+FRM-30064: Unable to parse statement select * from rayon order by DESIGNATION_RAYON.
+ORA-12152: TNS:unable to send break message
+Record Group RAYON_RG
+Form: BIBLIOTHEQUE
+FRM-30085: Unable to adjust form for output.

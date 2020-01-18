@@ -1,0 +1,6 @@
+ORA-20001: Rem Unable to generate DDL for ORA-04031: impossible d'affecter 44 octets de mémoire partagée ("shared pool","SELECT /*+rule*/ SYS_XMLGEN(...","sql area","ub1[]: qkexrXformVal") .
+
+Select Disallow Delete to block delete of rows from the referenced table when there are dependant rows in this table. 
+Select Cascade Delete to delete the dependant rows from this table when the corresponding parent table row is deleted. 
+Select Set to Null on Delete to set foreign key column values to null when the corresponding parent table row is deleted.
+insert into rayon values(2,'Rayon 2');
